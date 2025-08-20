@@ -4,6 +4,63 @@ This project serves as a starter template for building a website agent using [AT
 
 Follow [the tutorial](https://docs.atxp.ai/client/guides/tutorial) to build your first ATXP-powered agent.
 
+## Quick Start
+
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+
+### Setup
+
+1. Create a repo using [the template](https://github.com/new?template_name=atxp-agent-starter&template_owner=atxp-dev).
+
+2. Clone your newly created repo:
+   ```bash
+   git clone git@github.com:your-github-user/your-new-repo
+   cd your-new-repo
+   ```
+
+2. Install all dependencies:
+   ```bash
+   npm run install-all
+   ```
+
+3. Create an `backend/.env` and set the `ATXP_CONNECTION_STRING` env var with your connection string from [https://accounts.atxp.ai](https://accounts.atxp.ai). See [the docs](https://docs.atxp.ai/client/create_an_account) for more information on creating an ATXP account.
+    ```bash
+   cp backend/env.example backend/.env
+    ```
+
+### Usage
+
+1. Start both frontend and backend in development mode:
+   ```bash
+   npm run dev
+   ```
+
+   This will start:
+   - Backend server on `http://localhost:3001`
+   - Frontend development server on `http://localhost:3000`
+
+2. Open your browser and navigate to `http://localhost:3000`
+
+### Running Separately
+
+- **Backend only**: `npm run server`
+- **Frontend only**: `npm run client`
+
+### Production Build
+
+1. Build both frontend and backend for production:
+   ```bash
+   npm run build
+   ```
+
+2. Start the production server:
+   ```bash
+   npm start
+   ```
+
 ## Project Structure
 
 ```
@@ -36,71 +93,6 @@ agent-demo/
 - **CORS Enabled**: Cross-origin requests supported
 - **Error Handling**: Comprehensive error handling and user feedback
 
-## API Endpoints
-
-- `GET /api/texts` - Retrieve all submitted texts
-- `POST /api/texts` - Submit new text
-- `GET /api/health` - Health check endpoint
-
-## Quick Start
-
-### Prerequisites
-
-- Node.js (v14 or higher)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone <repository-url> <your-agent-name>
-   cd <your-agent-name>
-   ```
-
-2. Install all dependencies:
-   ```bash
-   npm run install-all
-   ```
-
-### Development
-
-1. Start both frontend and backend in development mode:
-   ```bash
-   npm run dev
-   ```
-
-   This will start:
-   - Backend server on `http://localhost:3001`
-   - Frontend development server on `http://localhost:3000`
-
-2. Open your browser and navigate to `http://localhost:3000`
-
-### Running Separately
-
-- **Backend only**: `npm run server`
-- **Frontend only**: `npm run client`
-
-### Production Build
-
-1. Build both frontend and backend for production:
-   ```bash
-   npm run build
-   ```
-
-2. Start the production server:
-   ```bash
-   npm start
-   ```
-
-## Environment Variables
-
-Create a `.env` file in the `backend/` directory:
-
-```env
-PORT=3001
-NODE_ENV=development
-```
-
 ## Development Scripts
 
 - `npm run dev` - Start both frontend and backend in development mode
@@ -111,6 +103,12 @@ NODE_ENV=development
 - `npm run build:frontend` - Build only the frontend for production
 - `npm run install-all` - Install dependencies for all packages and build backend
 - `npm start` - Start the production server
+
+## API Endpoints
+
+- `GET /api/texts` - Retrieve all submitted texts
+- `POST /api/texts` - Submit new text
+- `GET /api/health` - Health check endpoint
 
 ## Technologies Used
 
@@ -127,14 +125,6 @@ NODE_ENV=development
 - **TypeScript** - Type-safe JavaScript development
 - **Axios** - HTTP client for API calls
 - **CSS3** - Modern styling with responsive design
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Test thoroughly
-5. Submit a pull request
 
 ## License
 
