@@ -67,6 +67,7 @@ Follow [the tutorial](https://docs.atxp.ai/client/guides/tutorial) to build your
 agent-demo/
 ├── backend/                # Express server
 │   ├── server.ts           # Main server file (TypeScript)
+│   ├── stage.ts            # Progress tracking utilities (TypeScript)
 │   ├── tsconfig.json       # TypeScript configuration
 │   ├── package.json        # Backend dependencies
 │   └── env.example         # Environment variables template
