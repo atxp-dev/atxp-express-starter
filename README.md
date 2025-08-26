@@ -2,7 +2,7 @@
 
 This project serves as a starter template for building a website agent using [ATXP](https://docs.atxp.ai). It uses a TypeScript Express backend and TypeScript React frontend.
 
-Follow [the tutorial](https://docs.atxp.ai/client/guides/tutorial) to build your first ATXP-powered agent.
+Follow [the Express + React agent tutorial](https://docs.atxp.ai/client/guides/tutorial) to build your first ATXP-powered agent.
 
 ## Quick Start
 

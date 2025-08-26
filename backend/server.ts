@@ -47,7 +47,9 @@ interface Text {
 let texts: Text[] = [];
 
 // TODO: Create a helper config object for each ATXP MCP Server you want to use
+// See "Step 1" at https://docs.atxp.ai/client/guides/tutorial#set-up-the-connections-to-the-mcp-servers for more details.
 // For example, if you want to use the ATXP Image MCP Server, you can use the following config object:
+// Helper config object for the ATXP Image MCP Server
 // const imageService = {
 //   mcpServer: 'https://image.mcp.atxp.ai',
 //   toolName: 'image_create_image',
@@ -90,12 +92,11 @@ app.post('/api/texts', async (req: Request, res: Response) => {
   sendStageUpdate(requestId, 'creating-clients', 'Initializing ATXP clients...', 'in-progress');
 
   // TODO: Create a client using the `atxpClient` function for each ATXP MCP Server you want to use
+  // See "Step 2" at https://docs.atxp.ai/client/guides/tutorial#set-up-the-connections-to-the-mcp-servers for more details.
   // For example, if you want to use the ATXP Image MCP Server, you can use the following code:
   // const imageClient = await atxpClient({
   //   mcpServer: imageService.mcpServer,
   //   account: account,
-  //   allowedAuthorizationServers: ['http://localhost:3001', 'https://auth.atxp.ai'],
-  //   logger: new ConsoleLogger({level: LogLevel.DEBUG}),
   // });
 
   // Send stage update for just before the MCP tool call
@@ -118,11 +119,11 @@ app.post('/api/texts', async (req: Request, res: Response) => {
     // console.log('Result:', imageResult);
 
 
-    // TODO: If you want to use the result of the MCP tool call in another MCP tool call, you will need
+    // Note: If you want to use the result of the MCP tool call in another MCP tool call, you will need
     // a nested try/catch block wrapping the call to the next MCP tool.
 
     // TODO: Save the result of the MCP tool call to the `newText` object
-    // For example, if you want to use the ATXP Image MCP Server, you can use the following code:
+    // For example, if you want to use the result of the ATXP Image MCP Server, you can use the following code:
     //newText.imageUrl = imageResult.url;
 
     // Save the `newText` object to the `texts` array
